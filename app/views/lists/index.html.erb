@@ -1,9 +1,20 @@
-<h1>Lists</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1176&q=80);">
+  <div class="container">
+    <h1 class="text-center">Save any kind of movies</h1>
+  </div>
+</div>
 
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <div class="d-flex justify-content-between m-3">
+  <h2>My Lists</h2>
+  <%= link_to "New List", new_list_path, class: "btn btn-flat" %>
+  </div>
 
-<%= link_to "Create a new list", new_list_path %>
+  <div class="cards">
+    <% @lists.each do |list| %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1585647347129-7aebb8689a78?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNpbmVtYXxlbnwwfHwwfHx8Mg%3D%3D&auto=format&fit=crop&w=500&q=60)">
+          <%= link_to list.name, list_path(list), class: "nav-link" %>
+        </div>
+    <% end %>
+  </div>
+</div>
