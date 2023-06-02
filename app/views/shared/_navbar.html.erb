@@ -1,6 +1,8 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div data-controller="fixed_navbar"
+     data-action="scroll@window->fixed_navbar#updateNavbar"
+     class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to lists_path, class: "navbar-brand" do %>
       <%= image_tag "https://static.vecteezy.com/system/resources/previews/004/796/030/original/illustration-graphic-of-popcorn-logo-free-vector.jpg" %>
     <% end %>
 

@@ -4,5 +4,11 @@
 
 import { application } from "./application"
 
+import FixedNavbarController from "./fixed_navbar_controller"
+application.register("fixed-navbar", FixedNavbarController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import TomSelectController from "./tom_select_controller"
+application.register("tom-select", TomSelectController)
