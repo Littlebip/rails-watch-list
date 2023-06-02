@@ -9,7 +9,7 @@
 <div class="cards">
   <% @bookmarks.each do |bm| %>
     <div class="card-trip container">
-      <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2luZW1hfGVufDB8fDB8fHwy&auto=format&fit=crop&w=1000&q=60" />
+      <%= image_tag bm.movie.poster_url %>
       <div class="card-trip-infos">
         <div>
           <h2><%= bm.movie.title %> - <%= bm.movie.rating %> ⭐</h2>
